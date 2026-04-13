@@ -38,9 +38,9 @@ Tested and verified to work on Google Cloud Platform (GCP) using cloud shell to 
 
 1- Clone the Repository
 
-git clone https://github.com/8amadel/building-multi-agent-systems.git
+git clone https://github.com/8amadel/Building-Multi-Agent-Systems.git
 
-2- Set your environment variables in mas/config.env
+2- Set your environment variables in Building-Multi-Agent-Systems/config.env
 
 3- Authenticate
 
@@ -52,7 +52,7 @@ Accept all actions by always answering with "y", follow the prompt by opening th
 
 4- Make the scripts executable and run the single deployment command
 
-cd mas/
+cd Building-Multi-Agent-Systems/
 
 find . -type f -name "*.sh" -exec chmod u+x {} +
 
