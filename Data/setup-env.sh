@@ -104,6 +104,6 @@ done
 echo "Time's up!"
 
 pip install google-cloud-alloydb
-python3 $BASE_DIR/mas/Data/setup-env.py
+python3 $BASE_DIR/Building-Multi-Agent-Systems/Data/setup-env.py
 pip install GitPython
-python3 $BASE_DIR/mas/Data/git_agent_setup.py
+python3 $BASE_DIR/Building-Multi-Agent-Systems/Data/git_agent_setup.py
