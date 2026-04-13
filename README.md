@@ -45,6 +45,7 @@ git clone https://github.com/8amadel/building-multi-agent-systems.git
 3- Authenticate
 
 gcloud auth login
+
 gcloud auth application-default login
 
 Accept all actions by always answering with "y", follow the prompt by opening the provided link in a browswer, tick all the checkboxes and copy the code back to the terminal.
