@@ -1,0 +1,18 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "experimental": {
+    "enableAgents": true
+  },
+  "ui": {
+    "theme": "Default Light"
+  },
+  "general": {
+    "plan": {
+      "modelRouting": false
+    }
+  }
+}
