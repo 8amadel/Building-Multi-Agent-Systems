@@ -11,7 +11,7 @@ DATABASE_ID = os.environ.get("ALLOYDB_DATABASE_NAME")
 BASE_DIR = os.environ.get("BASE_DIR")
 DB_USER = "postgres"
 DB_PASSWORD = "alloydb"
-SCHEMA_FILE = f"{BASE_DIR}/mas/Data/schema.sql"
+SCHEMA_FILE = f"{BASE_DIR}/Building-Multi-Agent-Systems/Data/schema.sql"
 PROJECT_NUMBER=os.environ.get("PROJECT_NUMBER")
 
 
@@ -80,7 +80,7 @@ def main():
     # Load CSV Data via Bulk INSERT
 
     files_to_load = [
-        ("troubleshooting_kb", f"{BASE_DIR}/mas/Data/troubleshooting_kb.csv")
+        ("troubleshooting_kb", f"{BASE_DIR}/Building-Multi-Agent-Systems/Data/troubleshooting_kb.csv")
     ]
 
     for table_name, file_name in files_to_load:
