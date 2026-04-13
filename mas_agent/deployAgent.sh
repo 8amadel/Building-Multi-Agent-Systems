@@ -64,16 +64,16 @@ gcloud services enable \
   --project=$PROJECT_ID
 
 echo "installing packages"
-pip install -r $BASE_DIR/mas/mas_agent/requirements.txt
+pip install -r $BASE_DIR/Building-Multi-Agent-Systems/mas_agent/requirements.txt
 
 echo "setting Gemini Model in agent definition"
-sed -i "s|PHGM|$GEMINI_MODEL|g" "$BASE_DIR/mas/mas_agent/agent.py"
+sed -i "s|PHGM|$GEMINI_MODEL|g" "$BASE_DIR/Building-Multi-Agent-Systems/mas_agent/agent.py"
 
 echo "Creating deployment bucket"
 gcloud storage buckets create gs://$PROJECT_ID-a2a-bucket --location=$REGION_ID --project=$PROJECT_ID
 
 (
-cd $BASE_DIR/mas/mas_agent
+cd $BASE_DIR/Building-Multi-Agent-Systems/mas_agent
 python deploy.py
 )
 
@@ -95,11 +95,11 @@ AGENT_RESOURCE=$(gcloud asset search-all-resources \
 
 AGENT_ID=$(basename "$AGENT_RESOURCE")
 AGENT_URL="https://$REGION_ID-aiplatform.googleapis.com/v1beta1/projects/$PROJECT_NUMBER/locations/$REGION_ID/reasoningEngines/$AGENT_ID/a2a/v1/card"
-sed -i "s|PHAR|$AGENT_URL|g" "$BASE_DIR/mas/mas_agent/mas_agent.md"
+sed -i "s|PHAR|$AGENT_URL|g" "$BASE_DIR/Building-Multi-Agent-Systems/mas_agent/mas_agent.md"
 
 mkdir -p ~/.gemini/agents
 cp ~/.gemini/settings.json ~/.gemini/setting.json.bk
-cp $BASE_DIR/mas/mas_agent/settings.json ~/.gemini
-cp $BASE_DIR/mas/mas_agent/mas_agent.md ~/.gemini/agents
+cp $BASE_DIR/Building-Multi-Agent-Systems/mas_agent/settings.json ~/.gemini
+cp $BASE_DIR/Building-Multi-Agent-Systems/mas_agent/mas_agent.md ~/.gemini/agents
 
 echo "Deployment Completed!"
