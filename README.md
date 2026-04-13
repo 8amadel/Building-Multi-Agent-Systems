@@ -71,4 +71,4 @@ gemini
 
 Use your sub-agent mas_agent to troubleshoot the following error:
 Exception in thread 'main' TimeoutException: at com.system.SchemaMigrator.execute(SchemaMigrator.py:80).
-Only delegate to the subagent and do not try to do anything else. If calling the sub-agent fails then display the failure error and stop
+Only delegate to the subagent and display its output without changing it or doing anything else.
