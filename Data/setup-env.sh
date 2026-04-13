@@ -27,6 +27,7 @@ gcloud services enable \
 
 gcloud beta services identity create --service=alloydb.googleapis.com --project=$PROJECT_ID
 gcloud beta services identity create --service=compute.googleapis.com --project=$PROJECT_ID
+gcloud beta services identity create --service=aiplatform.googleapis.com --project=$PROJECT_ID
 
 
 echo "Holding for 1 minute to make sure the default service accounts are created"
