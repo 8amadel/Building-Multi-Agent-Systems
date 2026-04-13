@@ -63,6 +63,8 @@ Constructing agent card and setting in .md file
 Deployment Completed!
 
 6- Test using gemini CLI
+export MAS_TOKEN=$(gcloud auth print-access-token)
+
 gemini
 
 /agents reload
