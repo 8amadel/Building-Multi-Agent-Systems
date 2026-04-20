@@ -27,11 +27,18 @@ Merger Agent: Waits for the parallel agents to finish, ingests their raw data, a
 The formatted report is streamed back up the A2A chain to the user's CLI.
 
 **Technologies Used**
+
 Gemini CLI: The primary user interface and top-level routing agent.
+
 A2A (Agent-to-Agent) Protocol: The communication layer that allows the CLI to securely delegate tasks to remote sub-agents.
+
 ADK (Agent Development Kit): The Python framework used to define the ParallelAgent, SequentialAgent, and internal routing logic.
+
 Vertex AI Agent Engine: The serverless Google Cloud runtime environment hosting our ADK sub-agent architecture.
+
 Google Cloud AlloyDB: The enterprise PostgreSQL-compatible database queried by the agents to retrieve historical error logs and solutions.
+
+Remote (Managed) MCP Server
 
 **Installation & Setup** 
 Tested and verified to work on Google Cloud Platform (GCP) using cloud shell to create and deploy the required resources
